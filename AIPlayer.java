@@ -115,7 +115,7 @@ public class AIPlayer {
             return false;
         }
 
-        // check is the location is vacant.
+        // check if the location is vacant.
         int[][] shape = item.getShape();
 
         boolean valid = false;
