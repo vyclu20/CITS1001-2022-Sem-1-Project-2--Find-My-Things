@@ -3,6 +3,8 @@ Project was last updated on: 25 May 2022
 
 **This was a university project for a basic java object oriented programming unit/module.**
 
+There were more classes to this project but they were not written by me. So only what I have uploaded are my edits of the given skeletons (author name in Java files), and running these Java files alone will not work. The code itself passed all tests and overall received a project grade of over 85%.
+
 ## Project Overview
 
 The goal of this project was to develop a game called Find my Things. "Things" are randomly placed on the board at random locations and orientations by the AIPlayer. All placed "things" are hidden to the player at the beginning of the game. It is the player's job to locate all the "things" before they run out of turns (number of clicks allowed). More on the game in the Game Specification section of this read me.
