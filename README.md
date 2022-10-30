@@ -18,6 +18,7 @@ We had to edit four java classes: GameViewer, AIPlayer, Board, and Item. What we
 This was originally a partner project, but for the sake of me uploading this project on github I will upload all of my own work for the four java classes. The GameViewer and AIPlayer classes my project partner did had additional features such as an auto solver and difficulty levels, but what I have uploaded are just enough to get the game running without any errors. Perhaps in the future when I have time I'll come back to this and add those features along with many more to enhance the gameplay.
 
 There were more classes to this project but they were not written by me, so only what I have edited are what are uploaded.
+
 ⭒■━━━━━━━━━━━━━━━■⭒
 
 GameViewer: Represents one interface for playing the game Find my Things.
