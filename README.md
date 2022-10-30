@@ -3,7 +3,7 @@ Project was last updated on: 25 May 2022
 
 **This was a university project for a basic java object oriented programming unit/module.**
 
-There were more classes to this project but they were not written by me. So only what I have uploaded are my edits of the given skeletons (author name in Java files), and although compiling these Java files will work, them alone will run as a functioning game. The code itself passed all tests and overall received a project grade of over 85%.
+There were more classes to this project but they were not written by me. So only what I have uploaded are my edits of the given skeletons (author name in Java files), and although compiling these Java files will work, them alone will not run as a functioning game. The code itself passed all tests and overall received a project grade of over 85%.
 
 ## Project Overview
 
