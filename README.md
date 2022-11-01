@@ -26,6 +26,7 @@ Again there were more classes to this project but they were not written by me, s
 > AIPlayer: Represents the computer, who will hide "things" on the board at the start of every game of Find My Things (i.e when the game is loaded or when the game is restarted).
 
 > Board: Represents the current state of the game board in one game of Find my Things (i.e. for each piece on the board, does this space contain a lost item, a found item, a searched space, or an unsearched space).
+
 > Item: Represents a "thing" that is hidden by the AIPlayer and must by found by the player during the game.
 
 
