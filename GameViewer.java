@@ -155,6 +155,38 @@ public class GameViewer implements MouseListener {
      */
     public void refreshBoard(int xLastClicked, int yLastClicked) {
         // TODO 40
+        for (Item item : selectedItems){
+            if (item.getIsFound() == false){
+                int[][] shape = item.getShape();
+                int rows = shape.length;
+                int cols = shape[0].length;
+                boolean failed = false;
+                for (int i = 0; i < rows; i++) {
+                    for (int j = 0; j < cols; j++) {
+                        if (shape[i][j] == 1 && bd.isFoundItem(item.getLocationX() + j,
+                                                               item.getLocationY() + i) == false){
+                            failed = true;
+                            break;
+                        }
+                    }
+                    if (failed){
+                        break;
+                    }
+                }
+                if (failed == false){
+                    item.setFound(); 
+                    numberOfFoundItems += 1;
+                }
+            }
+        }
+        if (bd.isPiece(xLastClicked, yLastClicked)){
+            closestLostItem = bd.getClosestItem(xLastClicked, yLastClicked);
+        }
+        sc.drawBoard(brdSize, bkSize, scoreboardSize, turnsRemaining,
+                    closestLostItem, numberOfFoundItems, selectedItems, bd);
+        if (turnsRemaining == 0 || numberOfFoundItems == numberOfHiddenItems){
+            drawGameOutcome();
+        }
     }
 
     /**
@@ -170,7 +202,18 @@ public class GameViewer implements MouseListener {
      */
     public int takeTurn(int x, int y) {
         // TODO 41
-        return 0;
+        int[] clicked_piece = getNearestPiece(x, y);
+        if (bd.isPiece(clicked_piece[0], clicked_piece[1]) && turnsRemaining != 0){
+            if (bd.isVacant(clicked_piece[0], clicked_piece[1])){
+                reduceTurns(false);
+                bd.setSearched(clicked_piece[0], clicked_piece[1]);
+            }
+            if (bd.isLostItem(clicked_piece[0], clicked_piece[1])){
+                bd.setFoundItem(clicked_piece[0], clicked_piece[1]);
+            }
+        }
+        refreshBoard(clicked_piece[0], clicked_piece[1]);
+        return turnsRemaining;
     }
 
     /**
