@@ -363,9 +363,13 @@ public class Board {
      */
     public ArrayList<Item> getFoundItemsList(Item[] items) {
         // TODO 27
-        ArrayList<Item> item = new ArrayList<>();
-        Collections.addAll(item, items);
-        return item;
-    }
+        ArrayList<Item> itemsFound = new ArrayList<>();
 
+        for (Item i : items) {
+        if (checkForFoundItem(i) == true) {
+        itemsFound.add(i);
+        }
+    }
+    return itemsFound;
+    }
 }
